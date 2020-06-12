@@ -116,7 +116,7 @@ def cuttrace( trace_number, sizeofsw ):
         while (flag<1 and i<len(vec5)):
             if (vec5[i]>0.2*min(vec5)):
                 flag=1
-	    i=i+1
+            i=i+1
         i=i-1
         if (i<len(vec5) and timevec[i]>4):
             #print("resizing trace %d to %g ms, %d\n", trace_number, timevec[i], i)
@@ -276,11 +276,11 @@ def run_model(parameters, time_trace=None):
         neuron.h.execute('sprint(cmdstr,"%s = %g", paramnamenrn[a].s, parametersnrn.x[a])')
         #print neuron.h.cmdstr
         #neuron.h(neuron.h.cmdstr)
-        exec neuron.h.cmdstr
+        exec(neuron.h.cmdstr)
     #print "geph", synapse.geph
     for i in range(nrdepnotfit):
         cmd=depnotfit[i]
-        exec cmd
+        exec(cmd)
     #print "nhalf", synapse.nhalf
 
     neuron.h.tstop = tstop

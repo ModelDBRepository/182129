@@ -120,8 +120,8 @@ def fitting(configuration_file, experimental_file, mod_file, all_traces, singlet
             vecerrorssingletrace.append(errorrs[k])
         if len(vecerrorssingletrace)>0:
             indexplot=[n for n,i in enumerate(vecerrorssingletrace) if i==min(vecerrorssingletrace) ][0]
-            print "indexplot ", indexplot
-            print "error ", errorrs[indexplot]
+            print("indexplot ", indexplot)
+            print("error ", errorrs[indexplot])
             if (len(nums)==0):
                 for k in range(len(timevecss)):
                     vec5pss = vec5ss[k]
@@ -156,9 +156,9 @@ def fitting(configuration_file, experimental_file, mod_file, all_traces, singlet
                     #plt.plot(timevecs2,vec5s2final,'g',timevecs2,model_current,'b')
             imagename='tracefit.png'
             #plt.savefig(imagename, dpi=300)      
-    print "done"
+    print("done")
     pc.done()
-    quit()
+    neuron.h.quit()
     
 def fixed(nrparamsfit,paraminitval):
     """Return fixed initialisation"""
@@ -231,14 +231,14 @@ def runsim(twoargs,pc,seedinitvalue,listofvecs,nrparamsfit):
     vec5reals=[]
     while (pc.working()):
         num2, fitnr2, error2, soglia2, minval2, vecparamfitted2, nefun2, sizeofswr, maxofswr, vec5r, timevecr, cutsinr, vec5real = pc.pyret()
-	print num2, fitnr2, error2, soglia2, minval2, nefun2
-	if (error2<soglia2):
-	    num2s.append(num2)
-	    fitnr2s.append(fitnr2)
-	    error2s.append(error2)
-	    soglia2s.append(soglia2)
-	    minval2s.append(minval2)
-	    vecparamfitted2s.append(vecparamfitted2)
+        print(num2,fitnr2,error2,soglia2,minval2,nefun2)
+        if (error2<soglia2):
+            num2s.append(num2)
+            fitnr2s.append(fitnr2)
+            error2s.append(error2)
+            soglia2s.append(soglia2)
+            minval2s.append(minval2)
+        vecparamfitted2s.append(vecparamfitted2)
         sizeofswrs.append(sizeofswr)
         maxofswrs.append(maxofswr)
         vec5rs.append(vec5r)

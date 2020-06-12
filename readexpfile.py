@@ -31,7 +31,7 @@ def readexpfile(num=0):
     times = []
     currents = []
     
-    data=file(filename2,'r')
+    data=open(filename2,'r')
     cols, indexToName = getColumns(data,header=False)
     if (flagdata==0):
         vecc=cols[0]

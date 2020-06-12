@@ -12,6 +12,13 @@ To run the fitting procedure:
 
 nrniv config-exp5.txt exp5.txt ProbGABAAB_EMS_GEPH_g.mod True False False 3 -python fitting.py
 
+If you run the fitting procedure on all traces of the dataset, it may take hours if it is not run in parallel. 
+In order to run it in parallel on a local machine with 4 cores use this code:
+
+mpiexec -n 4  nrniv config-exp5.txt exp5.txt ProbGABAAB_EMS_GEPH_g.mod True False False 3 -python -mpi fitting.py
+
+In alternative, you could use an HPC machine to run this fitting procedure.
+
 2) on the trace number 3 of the dataset "exp5" using 20 different initial parameter values 
 (uniformly randomized within a large, 5 orders of magnitude, range) and up to 3000 iteration steps for each run:
 
