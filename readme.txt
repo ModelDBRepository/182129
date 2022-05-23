@@ -44,5 +44,7 @@ Questions on the NEURON simulation should be addressed to
 carmen.lupascu-at-pa.ibf.cnr.it
 michele.migliore-at-cnr.it
 
----
-2022-05-17: make ProbGABAAB_EMS_GEPH_g compatible with Neuron9.0
+Changelog
+---------
+2022-05: Updated MOD files to contain valid C++ and be compatible with the
+         upcoming versions 8.2 and 9.0 of NEURON.
