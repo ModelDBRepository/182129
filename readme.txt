@@ -43,3 +43,8 @@ Questions on the NEURON simulation should be addressed to
 (replace -at- with the usual @ symbol):
 carmen.lupascu-at-pa.ibf.cnr.it
 michele.migliore-at-cnr.it
+
+Changelog
+---------
+2022-05: Updated MOD files to contain valid C++ and be compatible with the
+         upcoming versions 8.2 and 9.0 of NEURON.
