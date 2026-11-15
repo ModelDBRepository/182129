@@ -238,7 +238,7 @@ def run_model(parameters, time_trace=None):
         if "POINT_PROCESS" in line:
             break
     l2=line.split()
-    synapse = neuron.h.__getattribute__(l2[1])(.5)
+    synapse = getattr(neuron.h, l2[1])(.5)
     synapse.verboseLevel = 0
     synapse.Use = 1.0
     synapse.u0 = 1.0
